@@ -1,0 +1,58 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+li{
+    list-style-type: none;
+    border: 1px black solid;
+    display: flex;
+    justify-content: space-between;
+    width: 470px;
+    margin-bottom: 30px;
+    border: transparent;
+    font-size: 20px;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+}
+
+button:hover{
+    opacity: 0.5;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.js-todo-input{
+    height: 35px;
+    width: 470px;
+}
+
+span{
+    display: inline-block;
+    text-align: left;
+}
+
+.container{
+    margin: 0 auto;
+    width: 470px;
+    text-align: center;
+}
+
+.app-title{
+    font-size: 6rem;
+    color: rgb(182, 179, 179);
+    font-family: inherit;
+}
+
+.empty-state__title{
+    font-weight: 900;
+}
