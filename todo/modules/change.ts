@@ -1,6 +1,6 @@
-import { STATUS } from "./elem.js";
+import { STATUS } from "./elements.js";
 
-function changeStatus(status, element, checkbox) {
+function changeStatus(status: string, element: any, checkbox: any) {
     if(status === STATUS.DONE) {
         element.style.color = 'black';
         element.style.textDecoration = 'line-through';

@@ -1,19 +1,18 @@
-import { STATUS, toDoArr } from "./elem.js";
-import { render } from "../main.js";
+import { STATUS, toDoArr } from "./elements.js";
+import { render } from "../index.js";
 
-function addTodo(text) {
+function addTodo(text: string) {
     if(text !== '') {
         let task = text.trim();
         let newtask = new Task(task);
         toDoArr.push(newtask);
-        console.log(toDoArr)
     } else {
         return
     }
     render();
 }
 
-function Task(text) {
+function Task(text: string) {
     this.text = text,
     this.id = Date.now(),
     this.checked = false, 
