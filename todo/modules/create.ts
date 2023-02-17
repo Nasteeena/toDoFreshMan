@@ -1,6 +1,6 @@
-import { changeStatus } from "./changeStatus.js";
-import { elements, STATUS } from "./elem.js";
-import { deleteTask } from "./delete.js";
+import { changeStatus } from "./change.js";
+import { elements, STATUS } from "./elements.js";
+//import { deleteTask } from "./deleteTask.js";
 
 function createEl(element) {
     const newEl = document.createElement('li');
@@ -19,7 +19,7 @@ function createEl(element) {
 
     input.addEventListener('change', (event) => {
         event.preventDefault();
-        if(event.target.checked) {
+        if(input.checked) {
             element.status = STATUS.DONE
             element.checked = true;
         } else  {
@@ -29,9 +29,9 @@ function createEl(element) {
         changeStatus(element.status, label, input);
     })
 
-    cross.addEventListener('click', () => {
+ /*   cross.addEventListener('click', () => {
         deleteTask(element.text)
-    });
+    }); */
 
     changeStatus(element.status, label, input);
 }

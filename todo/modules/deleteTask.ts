@@ -1,7 +1,7 @@
-import { render } from "../main.js";
-import { toDoArr } from "./elem.js";
+import { render } from "../index.js";
+import { toDoArr } from "./elements.js";
 
-function deleteTask(task) {
+function deleteTask(task: string) {
     let res = toDoArr.findIndex(function(item) {
         return item.text === task;
     })
@@ -11,3 +11,4 @@ function deleteTask(task) {
 }
 
 export {deleteTask}
+
