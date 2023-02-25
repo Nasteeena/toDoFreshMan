@@ -1,10 +1,10 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.render = void 0;
-var elements_js_1 = require("./modules/elements.js");
-var add_js_1 = require("./modules/add.js");
-var create_js_1 = require("./modules/create.js");
-elements_js_1.elements.form.addEventListener('submit', function (event) {
+const elements_js_1 = require("./modules/elements.js");
+const add_js_1 = require("./modules/add.js");
+const create_js_1 = require("./modules/create.js");
+elements_js_1.elements.form.addEventListener('submit', (event) => {
     event.preventDefault();
     (0, add_js_1.addTodo)(elements_js_1.elements.inputMessage.value);
     elements_js_1.elements.inputMessage.value = '';

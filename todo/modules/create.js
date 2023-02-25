@@ -1,23 +1,23 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.createEl = void 0;
-var change_js_1 = require("./change.js");
-var elements_js_1 = require("./elements.js");
-//import { deleteTask } from "./deleteTask.js";
+const change_js_1 = require("./change.js");
+const elements_js_1 = require("./elements.js");
+const deleteTask_js_1 = require("./deleteTask.js");
 function createEl(element) {
-    var newEl = document.createElement('li');
-    var cross = document.createElement('button');
-    var input = document.createElement('input');
-    var label = document.createElement('label');
-    input.setAttribute('id', "".concat(element.id));
-    input.setAttribute('type', "checkbox");
+    const newEl = document.createElement('li');
+    const cross = document.createElement('button');
+    const input = document.createElement('input');
+    const label = document.createElement('label');
+    input.setAttribute('id', `${element.id}`);
+    input.setAttribute('type', `checkbox`);
     cross.textContent = 'x';
-    label.setAttribute('for', "".concat(element.id));
+    label.setAttribute('for', `${element.id}`);
     label.textContent = element.text;
     input.classList.add('inputList');
     newEl.prepend(input, label, cross);
     elements_js_1.elements.list.append(newEl);
-    input.addEventListener('change', function (event) {
+    input.addEventListener('change', (event) => {
         event.preventDefault();
         if (input.checked) {
             element.status = elements_js_1.STATUS.DONE;
@@ -29,9 +29,9 @@ function createEl(element) {
         }
         (0, change_js_1.changeStatus)(element.status, label, input);
     });
-    /*   cross.addEventListener('click', () => {
-           deleteTask(element.text)
-       }); */
+    cross.addEventListener('click', () => {
+        (0, deleteTask_js_1.deleteTask)(element.text);
+    });
     (0, change_js_1.changeStatus)(element.status, label, input);
 }
 exports.createEl = createEl;

@@ -1,7 +1,7 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.changeStatus = void 0;
-var elements_js_1 = require("./elements.js");
+const elements_js_1 = require("./elements.js");
 function changeStatus(status, element, checkbox) {
     if (status === elements_js_1.STATUS.DONE) {
         element.style.color = 'black';
