@@ -1,13 +1,13 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.deleteTask = void 0;
-var main_js_1 = require("../main.js");
-var elements_js_1 = require("./elements.js");
+const index_js_1 = require("../index.js");
+const elements_js_1 = require("./elements.js");
 function deleteTask(task) {
-    var res = elements_js_1.toDoArr.findIndex(function (item) {
+    let res = elements_js_1.toDoArr.findIndex(function (item) {
         return item.text === task;
     });
     elements_js_1.toDoArr.splice(res, 1);
-    (0, main_js_1.render)();
+    (0, index_js_1.render)();
 }
 exports.deleteTask = deleteTask;

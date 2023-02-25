@@ -1,16 +1,16 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.toDoArr = exports.STATUS = exports.elements = void 0;
-var elements = {
+const elements = {
     form: document.querySelector('.js-form'),
     inputMessage: document.querySelector('.js-todo-input'),
-    list: document.querySelector('.js-todo-list')
+    list: document.querySelector('.js-todo-list'),
 };
 exports.elements = elements;
-var STATUS = {
+const STATUS = {
     TO_DO: 'To do',
-    DONE: 'Done'
+    DONE: 'Done',
 };
 exports.STATUS = STATUS;
-var toDoArr = [];
+let toDoArr = [];
 exports.toDoArr = toDoArr;

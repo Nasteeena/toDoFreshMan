@@ -1,8 +1,8 @@
 import { changeStatus } from "./change.js";
 import { elements, STATUS } from "./elements.js";
-//import { deleteTask } from "./deleteTask.js";
+import { deleteTask } from "./deleteTask.js";
 
-function createEl(element) {
+function createEl(element: any) {
     const newEl = document.createElement('li');
     const cross = document.createElement('button');
     const input = document.createElement('input');
@@ -29,9 +29,9 @@ function createEl(element) {
         changeStatus(element.status, label, input);
     })
 
- /*   cross.addEventListener('click', () => {
+    cross.addEventListener('click', () => {
         deleteTask(element.text)
-    }); */
+    });
 
     changeStatus(element.status, label, input);
 }
